@@ -1,0 +1,9 @@
+flask
+streamlit
+neo4j
+openai
+python-dotenv
+dspy-ai
+sqlite3
+pillow
+requests
