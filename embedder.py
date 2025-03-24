@@ -89,7 +89,7 @@ class CypherFromText(dspy.Signature):
 
     Instruções de Implementação:
     Ao criar comandos Cypher, concentre-se na precisão das conexões e na riqueza dos detalhes, assegurando que o grafo final seja uma representação fidedigna e útil das memórias e informações.
-    E POR ULTIMO, SOMENTE RETORNE O COMANDO CYPHER, NAO PRECISA EXPLICAR NADA.
+    E POR ULTIMO, SOMENTE RETORNE O COMANDO CYPHER, SEM NECESSIDADE DE EXPLICAÇÕES.
     """
 
     text = dspy.InputField(desc="Texto para modelar usando nós, propriedades e relacionamentos.")
