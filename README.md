@@ -76,10 +76,7 @@ services:
     environment:
       NEO4J_AUTH: neo4j/sua_senha
     volumes:
-      - neo4j-data:/data
-
-volumes:
-  neo4j-data:
+      - ./neo4j-data:/data
 ```
 
 Execute o Docker Compose com:
