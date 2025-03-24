@@ -33,7 +33,7 @@ Aiden é um assistente inteligente desenvolvido em Python que utiliza inteligên
 ### Instalação
 Clone o repositório e instale as dependências:
 ```bash
-git clone https://github.com/seuusuario/aiden.git
+git clone https://github.com/andrebeloto/aiden.git
 cd aiden
 pip install -r requirements.txt
 ```
