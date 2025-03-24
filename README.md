@@ -25,7 +25,8 @@ Aiden é um assistente inteligente desenvolvido em Python que utiliza inteligên
 ├── embedder.py          # Conversão de texto para grafo de conhecimento
 ├── memoria.py           # Instruções detalhadas para interação com API
 ├── .env                 # Configurações e variáveis de ambiente
-└── conversas.db         # Banco SQLite com histórico das conversas
+├── conversas.db         # Banco SQLite com histórico das conversas
+└── docker-compose.yml   # Arquivo para configuração do Neo4j via Docker
 ```
 
 ## Configuração do Ambiente
@@ -58,6 +59,32 @@ python embedder.py
 Inicie a interface Streamlit:
 ```bash
 streamlit run app.py
+```
+
+### Neo4j com Docker
+Utilize o seguinte `docker-compose.yml` para iniciar facilmente uma instância do Neo4j:
+
+```yaml
+version: '3.8'
+services:
+  neo4j:
+    image: neo4j:latest
+    container_name: neo4j_aiden
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/sua_senha
+    volumes:
+      - neo4j-data:/data
+
+volumes:
+  neo4j-data:
+```
+
+Execute o Docker Compose com:
+```bash
+docker-compose up -d
 ```
 
 ## Uso
